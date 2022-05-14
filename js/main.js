@@ -7,7 +7,7 @@ function search() {
   searchInput.addEventListener("input", (event) => {
     var div = document.getElementById("searchResult");
 
-    listSuggestion = postApi.getSuggestion();
+    let listSuggestion = postApi.getSuggestion();
     if (!listSuggestion.length) return;
 
     div.style.display = "block";

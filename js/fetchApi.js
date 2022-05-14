@@ -1,21 +1,24 @@
-const token = 'xmr2wna5aj7t3012pcxgriqhd9c8u88kpttc1a3j'
+const token = "Bearer xmr2wna5aj7t3012pcxgriqhd9c8u88kpttc1a3j";
 
+const fetchData = async (url) => {
+  try {
+    let res = await fetch(url, {
+      headers: {
+        authorization: token,
+      },
+    });
 
-async function fetchData(url){
-    try {
-        let res = await fetch(url,{
-            headers: {
-                authorization: token
-            }
-        });
-        let response = await res.json();
-        return response;
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+    let response = await res.json();
+    
+    return response;
+
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
 export default fetchData;
+
 // async function getDataSuggestion(event) {
 //     const url = 'https://api.json-generator.com/templates/dyj6ivO6Zbzv/data';
 //     try {
@@ -90,4 +93,3 @@ export default fetchData;
 //         console.log(error);
 //     }
 // }
-
