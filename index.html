@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <!-- Use font Rubik -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div>
+      <input
+        type="text"
+        id="searchBox"
+        class="input-search"
+        name="searchBox"
+        placeholder="Search"
+      />
+    </div>
+    <div id="searchResult" class="isDisplay">
+      <p class="title">SUGGESTIONS</p>
+      <ul id="suggestions"></ul>
+      <p class="title">COLLECTIONS</p>
+      <ul id="collections"></ul>
+      <p class="title">PRODUCT</p>
+      <ul id="products"></ul>
+    </div>
+
+    <!-- Scripts should be placed here to prevent blocking render UI -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

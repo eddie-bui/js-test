@@ -1,0 +1,22 @@
+.input-search {
+    width: 200px;
+    height: auto; 
+  }
+  .icon-delete {
+    width: 10px;
+    height:10px;
+    color: grey;
+  }
+  .isDisplay {
+    width: 200px;
+    height: auto;
+    margin: 5px;
+    border: 1px solid black;
+    display: none;
+  }
+  
+  .title {
+    background-color: #d7d7d7;
+    padding: 5px;
+    margin: 0;
+  }
