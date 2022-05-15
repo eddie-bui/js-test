@@ -1,22 +1,21 @@
 const token = "Bearer xmr2wna5aj7t3012pcxgriqhd9c8u88kpttc1a3j";
 
-const fetchData = async (url) => {
+async function fetchData(url) {
   try {
-    let res = await fetch(url, {
+    const res = await fetch(url, {
       headers: {
         authorization: token,
       },
     });
 
-    let response = await res.json();
-    
-    return response;
+    const response = await res.json();
 
+    return response;
   } catch (error) {
     console.log(error);
     return null;
   }
-};
+}
 export default fetchData;
 
 // async function getDataSuggestion(event) {

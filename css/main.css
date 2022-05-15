@@ -15,10 +15,25 @@
     display: none;
   }
   
-  .title {
+  .title-box{
+    display: flex;
+    justify-content: space-between;
     background-color: #d7d7d7;
     padding: 5px;
     margin: 0;
+
+  }
+
+  .button {
+    border: 0px;
+    background-color: #d7d7d7;
+    height: auto;
+    width: 15px;
+    padding: 0 5px 0 5px;
+  }
+  
+  .hide {
+    display: none;
   }
 
   ul {

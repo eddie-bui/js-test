@@ -42,12 +42,21 @@
       />
     </div>
     <div id="searchResult" class="isDisplay">
-      <p class="title">SUGGESTIONS</p>
-      <ul id="suggestions"></ul>
-      <p class="title">COLLECTIONS</p>
-      <ul id="collections"></ul>
-      <p class="title">PRODUCT</p>
-      <ul id="products"></ul>
+      <div id="suggest-block" class="hide">
+        <div class ="title-box">
+          <p class="title">SUGGESTIONS</p>
+          <button id="deleteSuggest" class="button">X</button>
+        </div>
+        <ul id="suggestions"></ul>
+      </div>
+      <div id="collect-block" class="hide">
+        <p class="title">COLLECTIONS</p>
+        <ul id="collections"></ul>
+      </div>
+      <div id="product-block" class="hide">
+        <p class="title">PRODUCT</p>
+        <ul id="products"></ul>
+      </div>
     </div>
 
     <script type="module" src="js/main.js"></script>

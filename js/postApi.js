@@ -1,7 +1,7 @@
-import fetchData from "./fetchApi";
+import fetchData from "./fetchApi.js";
 
-export const postApi = {
-  getSuggestion() {
+const postApi = {
+   getSuggestion() {
     const url = "https://api.json-generator.com/templates/dyj6ivO6Zbzv/data";
     return fetchData(url);
   },
@@ -14,3 +14,5 @@ export const postApi = {
     return fetchData(url);
   },
 };
+
+export default postApi;
