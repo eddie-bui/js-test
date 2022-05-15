@@ -23,12 +23,15 @@
     margin: 0;
 
   }
+  .title {
+    margin: 0;
+  }
 
   .button {
     border: 0px;
     background-color: #d7d7d7;
     height: auto;
-    width: 15px;
+    width: 50px;
     padding: 0 5px 0 5px;
   }
   

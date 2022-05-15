@@ -27,12 +27,67 @@ function search() {
   });
 }
 
-// function OnOffBlock() {
-//   let btn = document.getElementById("deleteSuggest");
-//   btn.addEventListener("click", () => {
+function OnOffBlockSuggest() {
+  let btnShow = document.getElementById("showSuggest");
+  let btnHide = document.getElementById("hideSuggest");
+  btnShow.addEventListener("click", () => {
+    btnShow.style.display = "none";
+    btnHide.style.display = "block";
+    let ul = document.getElementById("suggestions");
+    ul.style.display = "block";
 
-//   })
-// }
+    List.isSuggestShow = !List.isSuggestShow;
+  });
+
+  btnHide.addEventListener("click", () => {
+    btnShow.style.display = "block";
+    btnHide.style.display = "none";
+    let ul = document.getElementById("suggestions");
+    ul.style.display = "none";
+    List.isSuggestShow = !List.isSuggestShow;
+  });
+  console.log(List.isSuggestShow);
+}
+
+function OnOffBlockCollection() {
+  let btnShow = document.getElementById("showCollection");
+  let btnHide = document.getElementById("hideCollection");
+  btnShow.addEventListener("click", () => {
+    btnShow.style.display = "none";
+    btnHide.style.display = "block";
+    let ul = document.getElementById("collections");
+    ul.style.display = "block";
+    List.isCollectionShow = !List.isCollectionShow;
+  });
+
+  btnHide.addEventListener("click", () => {
+    btnShow.style.display = "block";
+    btnHide.style.display = "none";
+    let ul = document.getElementById("collections");
+    ul.style.display = "none";
+    List.isCollectionShow = !List.isCollectionShow;
+  });
+}
+
+function OnOffBlockProduct() {
+  let btnShow = document.getElementById("showProduct");
+  let btnHide = document.getElementById("hideProduct");
+  btnShow.addEventListener("click", () => {
+    btnShow.style.display = "none";
+    btnHide.style.display = "block";
+    let ul = document.getElementById("products");
+    ul.style.display = "block";
+    List.isProductShow = !List.isProductShow;
+  });
+
+  btnHide.addEventListener("click", () => {
+    btnShow.style.display = "block";
+    btnHide.style.display = "none";
+    let ul = document.getElementById("products");
+    ul.style.display = "none";
+    List.isProductShow = !List.isProductShow;
+  });
+}
 
 async function getDataSuggestion(event) {
   const res = await postApi.getSuggestion();
@@ -75,4 +130,8 @@ async function getDataProduct(event) {
     }
   });
 }
+
+OnOffBlockSuggest();
+OnOffBlockCollection();
+OnOffBlockProduct();
 search();
